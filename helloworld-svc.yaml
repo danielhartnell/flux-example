@@ -3,7 +3,9 @@ kind: Service
 metadata:
   name: helloworld
 spec:
+  type: LoadBalancer
   ports:
+    - protocol: TCP
     - port: 80
   selector:
     name: helloworld
